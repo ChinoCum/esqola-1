@@ -14,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'lastname','telephone','age', 'email', 'password', 'address','firstaccess'
+        'bk','name', 'lastname','telephone','age', 'email', 'password', 'address','firstaccess', 'uuid'
     ];
 
     /**
@@ -39,8 +39,16 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Badges','saved_badges');
     }
 
+    public function grade() {
+        return $this->belongsToMany('App\Grades','grades');
+    }
+
     public function full_name() {
         return $this->name . ' ' . $this->lastname;
+    }
+
+    public function error() {
+        return $this->hasOne('App\errors');
     }
 
 }

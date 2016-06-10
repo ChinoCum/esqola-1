@@ -10,4 +10,9 @@ class error_types extends Model
     protected $fillable = [
         'error_name'
     ];
+
+    public function errors() {
+        return $this->hasOne('App\errors','type','id');
+    }
+
 }

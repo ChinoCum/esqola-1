@@ -13,48 +13,48 @@ class Relations extends Migration
     public function up()
     {
         Schema::table('rltn_user_grade', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('grade_id')->references('id')->on('grades');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
         });
 
         Schema::table('rltn_grade_course', function(Blueprint $table) {
-            $table->foreign('grade_id')->references('id')->on('grades');
-            $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
         });
 
         Schema::table('rltn_grade_events', function(Blueprint $table) {
-            $table->foreign('grade_id')->references('id')->on('grades');
-            $table->foreign('event_id')->references('id')->on('events');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
         });
 
         Schema::table('user_settings', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
         Schema::table('contents', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('grade_id')->references('id')->on('grades');
-            $table->foreign('course_id')->references('id')->on('courses');
-            $table->foreign('unit_id')->references('id')->on('units');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
         });
 
         Schema::table('homeworks', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('grade_id')->references('id')->on('grades');
-            $table->foreign('course_id')->references('id')->on('courses');
-            $table->foreign('unit_id')->references('id')->on('units');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
         });
 
         Schema::table('score', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('course_id')->references('id')->on('grades');
-            $table->foreign('unit_id')->references('id')->on('courses');
-            $table->foreign('homework_id')->references('id')->on('units');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('course_id')->references('id')->on('grades')->onDelete('cascade');
+            $table->foreign('unit_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->foreign('homework_id')->references('id')->on('units')->onDelete('cascade');
         });
 
         Schema::table('user_attributes', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('grade_id')->references('id')->on('grades');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade');
         });
     }
 

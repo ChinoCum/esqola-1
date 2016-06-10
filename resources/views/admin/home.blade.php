@@ -1,10 +1,16 @@
 @extends('layouts/__admin')
 @section('content')
-        <h1 class="ui header">
-            Dashboard de Administración
-        </h1>
-        <div class="ui divider"></div>
-
+    <div class="ui secondary pointing menu">
+        <a class="active item">
+            Dashboard
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <h5 class="ui header"> {!! Breadcrumbs::renderIfExists() !!}</h5>
+            </div>
+        </div>
+    </div>
+    @include ('_partials.esqolastatistics', ['statistics'=>$statistics])
     <script type="application/javascript">
         $('.dashboard-home').addClass('active');
     </script>

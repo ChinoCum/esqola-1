@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,14 @@
     {!! Html::style('semantic-ui/dist/semantic.min.css') !!}
     {!! Html::script('semantic-ui/dist/semantic.min.js') !!}
 
+    {!! Html::style('css/nprogress.css') !!}
+    {!! Html::script('scripts/nprogress.js') !!}
+
     {!! Html::style('css/custom.css') !!}
     {!! Html::script('scripts/app.js') !!}
+
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="application/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/dataTables.semanticui.min.js" type="application/javascript"></script>
 
     <title>Esqola | Administration</title>
 
@@ -33,16 +39,16 @@
         </div>
     </div>
 </div>
-<div class="ui">
+<div class="ui scrollablecontent">
     <div class="left-menu">
         <div class="ui attached vertical menu icon labeled left">
-            <a class="ui item orange dashboard-home" href="{!! action('adminController@dashboard') !!}">
+            <a class="ui item orange dashboard-home" href="{!! action('Admin\DashboardController@index') !!}">
                 <i class="icon dashboard"></i>
                 Dashboard
             </a>
-            <a class="ui item orange users-home" href="{!! action('adminController@mainUsers') !!}">
-                <i class="icon user"></i>
-                Usuarios
+            <a class="ui item orange users-home" href="{!! action('Admin\UsersController@mainUsers') !!}">
+                <i class="icon university"></i>
+                General
             </a>
             <a class="ui item orange">
                 <i class="icon book"></i>
@@ -63,6 +69,10 @@
             <a class="ui item orange">
                 <i class="icon setting"></i>
                 Ajustes
+            </a>
+            <a class="ui item orange log-home" href="{!! action('Admin\SystemController@log') !!}">
+                <i class="icon browser"></i>
+                Log
             </a>
             <a class="ui item orange" href="{!! url('/logout') !!}">
                 <i class="icon moon"></i>

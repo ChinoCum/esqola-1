@@ -16,7 +16,7 @@ class Errors extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('error',255);
-            $table->string('description');
+            $table->text('description');
             $table->integer('type')->unsigned();
             $table->timestamps();
         });
@@ -28,7 +28,8 @@ class Errors extends Migration
         });
 
         Schema::table('errors', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('error_types');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('type')->references('id')->on('error_types');
         });
 
     }
@@ -42,6 +43,7 @@ class Errors extends Migration
     {
         Schema::table('errors', function (Blueprint $table) {
             $table->dropForeign('errors_user_id_foreign');
+            $table->dropForeign('errors_type_foreign');
         });
         Schema::drop('error_types');
         Schema::drop('errors');

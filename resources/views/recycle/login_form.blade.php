@@ -12,7 +12,7 @@
             @endif
             <div class="required field">
                 <label> Email </label>
-                <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="text" class="email" name="email" value="{{ old('email') }}" placeholder="Email">
             </div>
 
             <div class="required field">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="field align-to-right">
-                    <button type="submit" class="ui basic   animated button">
+                    <button type="submit" class="ui basic submit animated button">
                         <div class="visible content">Iniciar Sesión</div>
                         <div class="hidden content">
                             <i class="right arrow icon"></i>
@@ -42,3 +42,6 @@
     </div>
 </div>
 
+<script type="application/javascript">
+    $('input.email').focus();
+</script>

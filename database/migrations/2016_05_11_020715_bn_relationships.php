@@ -13,8 +13,8 @@ class BnRelationships extends Migration
     public function up()
     {
         Schema::table('saved_badges', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('badges_id')->references('id')->on('badge');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('badges_id')->references('id')->on('badge')->onDelete('cascade');
         });
     }
 

@@ -21,19 +21,21 @@ class AppSetup extends Migration
             $table->integer('grade_id')->unsigned()->nullable();
             $table->string('incharge');
             $table->string('incharge_info');
-            $table->uuid('identifier');
+            $table->string('avatar');
             $table->timestamps();
         });
 
         Schema::create('grades', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name',500);
+            $table->string('uuid')->nullable();
             $table->timestamps();
         });
 
         Schema::create('courses', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name',300);
+            $table->string('uuid')->nullable();
             $table->timestamps();
         });
 
@@ -44,7 +46,7 @@ class AppSetup extends Migration
             $table->integer('course_id')->unsigned();
             $table->integer('unit_id')->unsigned();
             $table->string('title',255);
-            $table->string('description');
+            $table->text('description');
             $table->string('file');
             $table->dateTime('due_date');
             $table->timestamps();
@@ -76,7 +78,7 @@ class AppSetup extends Migration
             $table->integer('unit_id')->unsigned();
             $table->integer('course_id')->unsigned();
             $table->string('title',255);
-            $table->string('description');
+            $table->text('description');
             $table->string('file_path');
         });
 
