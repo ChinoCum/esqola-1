@@ -19,14 +19,10 @@ Route::auth();
 Route::get('/', 'HomeController@index');
 
 
-/*
- * ADMINISTRATION
- */
+//ADMINISTRATION
 Route::get('/admin', 'adminController@dashboard');
 
-/*
- * REMOVE USER
- */
+//REMOVE USER
 Route::get('/admin/users','adminController@mainUsers');
 Route::get('/admin/users/add','adminController@addUser');
 

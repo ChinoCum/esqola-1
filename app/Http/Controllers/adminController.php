@@ -18,6 +18,11 @@ class adminController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     * Show dashboard home
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function dashboard() {
 
         $user = Auth::user();
@@ -25,7 +30,11 @@ class adminController extends Controller
         return view('admin.home', ['user' => $user]);
     }
 
-
+    /**
+     * Show users home
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function mainUsers() {
 
         $user = Auth::user();
@@ -42,6 +51,11 @@ class adminController extends Controller
         return view('admin.users.add', ['user' => $user]);
     }
 
+    /**
+     * User Validation and Creation
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function createUser(Request $data) {
         $user = Auth::user();
         $message = [
@@ -94,10 +108,14 @@ class adminController extends Controller
             );
         }
 
-
         return view('admin.users.add', ['user' => $user, 'status' => $status]);
     }
 
+    /**
+     * Delete User From Database
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function removeUser($email) {
         try{
             $user = User::where('email','=',$email)->delete();
@@ -109,6 +127,7 @@ class adminController extends Controller
                 'type' => 2,
             ]);
         }
+
         return redirect()->action('adminController@mainUsers');
     }
 

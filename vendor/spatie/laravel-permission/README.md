@@ -289,6 +289,13 @@ A permission can be given to a role:
 $role->givePermissionTo('edit articles');
 ```
 
+
+You can determine if a role has a certain permission:
+
+```php
+$role->hasPermissionTo('edit articles');
+```
+
 A permission can be revoked from a role:
 
 ```php
@@ -338,6 +345,8 @@ I have all of these roles!
 I don't have all of these roles...
 @endhasallroles
 ```
+
+You can use Laravel's native `@can` directive to check if a user has a certain permission.
 
 ## Extending
 
