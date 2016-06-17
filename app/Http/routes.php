@@ -21,7 +21,7 @@ Route::get('/', ['as'=>'Inicio','uses'=>'HomeController@index']);
 
 //ADMINISTRATION
 Route::get('/admin', ['as'=>'Administración','uses'=>'Admin\DashboardController@index']);
-
+Route::resource('add','Admin\DashboardController@store');
 //ADMINISTRATION > GENERAL > USERS
 Route::get('/admin/users', ['as'=>'Usuarios','uses'=>'Admin\UsersController@mainUsers']);
 Route::get('/admin/users/add', ['as'=>'Agregar','uses'=>'Admin\UsersController@addUser']);

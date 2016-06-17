@@ -40,6 +40,7 @@
     </div>
 </div>
 <div class="ui scrollablecontent">
+    
     <div class="left-menu">
         <div class="ui attached vertical menu icon labeled left">
             <a class="ui item orange dashboard-home" href="{!! action('Admin\DashboardController@index') !!}">
@@ -79,9 +80,6 @@
                 Cerrar Sesión
             </a>
         </div>
-    </div>
-    <div class="main-content">
-        @yield('content')
     </div>
 </div>
 
