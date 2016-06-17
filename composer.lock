@@ -489,12 +489,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
+<<<<<<< HEAD
                 "reference": "d79805ade4b1dd82bddcb6873b9a99f7421032f3"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/LaravelCollective/html/zipball/d79805ade4b1dd82bddcb6873b9a99f7421032f3",
                 "reference": "d79805ade4b1dd82bddcb6873b9a99f7421032f3",
+=======
+                "reference": "4d5ed8a59a436dff1ee50ca8281ab4092fabcb73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/4d5ed8a59a436dff1ee50ca8281ab4092fabcb73",
+                "reference": "4d5ed8a59a436dff1ee50ca8281ab4092fabcb73",
+>>>>>>> refs/remotes/darkspawnd/master
                 "shasum": ""
             },
             "require": {
@@ -535,7 +544,11 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
+<<<<<<< HEAD
             "time": "2016-06-10 19:16:34"
+=======
+            "time": "2016-05-19 15:46:23"
+>>>>>>> refs/remotes/darkspawnd/master
         },
         {
             "name": "league/flysystem",
@@ -2417,6 +2430,7 @@
                 "testing"
             ],
             "time": "2016-05-22 21:52:33"
+<<<<<<< HEAD
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2471,6 +2485,8 @@
                 "static analysis"
             ],
             "time": "2015-12-27 11:43:31"
+=======
+>>>>>>> refs/remotes/darkspawnd/master
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -3472,6 +3488,7 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-05-26 21:46:24"
+<<<<<<< HEAD
         },
         {
             "name": "webmozart/assert",
@@ -3521,6 +3538,8 @@
                 "validate"
             ],
             "time": "2015-08-24 13:29:44"
+=======
+>>>>>>> refs/remotes/darkspawnd/master
         }
     ],
     "aliases": [],

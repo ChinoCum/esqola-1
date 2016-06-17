@@ -16,7 +16,6 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,.05);
-    overflow: hidden;
 }
 
 .app-main-login {
@@ -27,10 +26,6 @@ body {
     max-width: 500px;
 }
 
-.scrollablecontent {
-    overflow: scroll;
-}
-
 .login-page {
     position: relative;
     width: 100%;
@@ -38,24 +33,18 @@ body {
     background: orange;
 }
 
-.left-menu {
+.admin-main {
     position: relative;
-    max-width: 100px;
-    border-right: 1px solid rgba(34,36,38,.15);
-    height: 100vh;
-    top: -1px;
-    display: inline-block;
-    vertical-align: top;
+    margin-top: 45px;
 }
 
-.main-content {
-    position: relative;
-    width:  100%;
-    max-width: calc(100vw - 100px);
-    display: inline-block;
-    vertical-align: top;
-    padding: 50px;
-    margin-left: -5px;
-    overflow: scroll;
-    height: calc(100vh - 55px);
+.admin-main > .ui.sidebar {
+    top: 40px;
+    max-width: 150px;
+}
+
+.admin-main > .pusher {
+    margin-left: 150px;
+    padding: 20px;
+    padding-right: 40px;
 }

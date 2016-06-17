@@ -6,8 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+
     $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
     $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+
+    $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
+
     $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     $vendorDir . '/symfony/polyfill-php56/bootstrap.php',

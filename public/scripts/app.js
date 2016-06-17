@@ -3,7 +3,9 @@ $(function () {
     NProgress.start();
     NProgress.done();
 
-    $('.ui.button.submit').click(function () {$(this).addClass('loading')});
+    $('.ui.button.submit').click(function () {
+        $(this).addClass('loading')
+    });
 
     $('.ui.table').DataTable({
         "language": {
@@ -21,5 +23,14 @@ $(function () {
     });
 
     $('.ui.dropdown.normal').dropdown();
+
+    $(window).on('resize', function () {
+        resizeMainContent();
+    });
+    resizeMainContent();
+    function resizeMainContent() {
+        var mainContentSize = window.innerWidth - $('.left-menu').width();
+        $('.main-content').css('width',mainContentSize);
+    }
 
 });

@@ -10,7 +10,6 @@
     {!! Html::script('semantic-ui/dist/semantic.min.js') !!}
 
     {!! Html::style('css/custom.css') !!}
-    {!! Html::script('scripts/app.js') !!}
 
     <title>Esqola {{$seo->title or ''}}</title>
 

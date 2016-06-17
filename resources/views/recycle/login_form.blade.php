@@ -1,5 +1,5 @@
 <div class="ui attached segments">
-    <div class="ui segment center aligned"> <div class="ui header">Inicio de Sesión</div> </div>
+    <div class="ui segment center aligned"> <div class="ui header orange">ESQOLA</div> </div>
     <div class="ui segment">
         <form class="ui form error" role="form" method="POST" action="{{ url('/login') }}">
             {!! csrf_field() !!}
@@ -44,4 +44,7 @@
 
 <script type="application/javascript">
     $('input.email').focus();
+    $('.ui.button.submit').click(function () {
+        $(this).addClass('loading')
+    });
 </script>
