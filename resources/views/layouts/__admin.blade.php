@@ -37,50 +37,7 @@
         </a>
     </div>
 </div>
-<<<<<<< HEAD
-<div class="ui scrollablecontent">
-    
-    <div class="left-menu">
-        <div class="ui attached vertical menu icon labeled left">
-            <a class="ui item orange dashboard-home" href="{!! action('Admin\DashboardController@index') !!}">
-                <i class="icon dashboard"></i>
-                Dashboard
-            </a>
-            <a class="ui item orange users-home" href="{!! action('Admin\UsersController@mainUsers') !!}">
-                <i class="icon university"></i>
-                General
-            </a>
-            <a class="ui item orange">
-                <i class="icon book"></i>
-                Notas
-            </a>
-            <a class="ui item orange">
-                <i class="icon file"></i>
-                Tareas
-            </a>
-            <a class="ui item orange">
-                <i class="icon content"></i>
-                Contenidos
-            </a>
-            <a class="ui item orange">
-                <i class="icon calendar"></i>
-                Eventos
-            </a>
-            <a class="ui item orange">
-                <i class="icon setting"></i>
-                Ajustes
-            </a>
-            <a class="ui item orange log-home" href="{!! action('Admin\SystemController@log') !!}">
-                <i class="icon browser"></i>
-                Log
-            </a>
-            <a class="ui item orange" href="{!! url('/logout') !!}">
-                <i class="icon moon"></i>
-                Cerrar Sesión
-            </a>
-        </div>
-    </div>
-=======
+
 <div class="ui admin-main">
     <div class="ui vertical orange inverted   menu sidebar visible thin">
         <a class="ui item orange dashboard-home" href="{!! action('Admin\DashboardController@index') !!}">
@@ -124,7 +81,6 @@
     <div class="pusher">
         @yield('content')
     </div>
->>>>>>> refs/remotes/darkspawnd/master
 </div>
 <script type="application/javascript">
 </script>
